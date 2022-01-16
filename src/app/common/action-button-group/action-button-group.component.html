@@ -1,0 +1,17 @@
+<div class="btn-group mt-1">
+  <app-action-button
+    [icon]="'fa-eye'"
+    [btnClass]="!changed ? 'btn-info' : 'd-none'"
+    (clicked)="onSelectButtonClick()"
+  ></app-action-button>
+  <app-action-button
+    [icon]="'fa-edit'"
+    [btnClass]="changed ? 'btn-success' : 'd-none'"
+    (clicked)="onUpdateButtonClick()"
+  ></app-action-button>
+  <app-action-button
+    [icon]="'fa-trash'"
+    [btnClass]="!changed ? 'btn-danger' : 'd-none'"
+    (clicked)="onDeleteButtonClick()"
+  ></app-action-button>
+</div>

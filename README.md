@@ -1,5 +1,13 @@
 # Angular Component - Gyakorlás
 
+## További feladatok
+- kiválasztott felhasználó sorát jelölje más háttérszínnel
+- adatok módosítása legyen visszavonható
+- azonosítót ne lehessen szerkeszteni
+- a boolean adat ne text típusú legyen
+- és a teszt sikeresen fusson le továbbra is
+[![screen](screen.gif)](screen.gif)
+
 ## Kezdő lépések
 - Lépj be a letöltött mappába, és állítsd be a projektet:
 - `code . -r`

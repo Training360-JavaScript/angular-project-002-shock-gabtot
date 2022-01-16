@@ -1,0 +1,24 @@
+<div class="my-1 mr-1">
+  <input
+    *ngIf="key !== 'active'"
+    [(ngModel)]="data[key]"
+    (ngModelChange)="inputChange()"
+    [readonly]="key==='id'"
+    type="text" class="form-control"
+  >
+
+  <div
+    *ngIf="key === 'active'"
+    class="custom-control custom-switch"
+  >
+    <input
+      type="checkbox"
+      class="custom-control-input"
+      [id]="'customSwitch'+data.id"
+      [(ngModel)]="data[key]"
+      (ngModelChange)="inputChange()"
+      [checked]="data[key]">
+    <label class="custom-control-label" [for]="'customSwitch'+data.id"></label>
+  </div>
+
+</div>

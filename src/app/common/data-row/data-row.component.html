@@ -1,0 +1,31 @@
+<div class="row">
+  <div
+    class="col-12 mb-1 pt-1 pb-1 d-flex justify-content-between align-items-center"
+    [class.bg-info]="isSelected"
+  >
+
+    <app-data-cell
+      *ngFor="let key of keys"
+      [data]="dataRowShadow"
+      [key]="key"
+      (onInputChange)="onDataChanged()"
+    ></app-data-cell>
+
+    <app-action-button-group
+      [changed]="dataChanged"
+      (selectClick)="onSelectClicked()"
+      (updateClick)="onUpdateClicked()"
+      (deleteClick)="onDeleteClicked()"
+    ></app-action-button-group>
+
+    <div class="btn-group mt-1">
+      <app-action-button
+        [icon]="'fa-undo'"
+        [btnClass]="dataChanged ? 'btn-warning' : 'd-none'"
+        (clicked)="onCancelClicked()"
+      ></app-action-button>
+    </div>
+
+
+  </div>
+</div>
